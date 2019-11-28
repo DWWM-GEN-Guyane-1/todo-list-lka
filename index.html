@@ -12,7 +12,16 @@
     <script type="text/javascript" src="https://unpkg.com/vue@latest/dist/vue.js"></script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/todomvc-app-css@2.2.0/index.css">
 </head>
-<body>
+<body><!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.5.0/firebase-app.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.5.0/firebase-analytics.js"></script>
+  
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+
         <section class="todoapp">
                 <header class="header">
                   <h1>todos</h1>
@@ -63,6 +72,18 @@
                 <p>Written by <a href="http://evanyou.me">Evan You</a></p>
                 <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
               </footer>
+
+
+<script>
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}</script>
+
 </body>
 </html>
 

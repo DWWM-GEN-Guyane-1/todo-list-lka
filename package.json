@@ -1,0 +1,12 @@
+{
+  "name": "Loucky974",
+  "version": "1.19.1",
+  "description": "\"Best package ever\"",
+  "main": "index.js",
+  "repository": "https://github.com/DWWM-GEN-Guyane-1/loucky_dossier.git",
+  "author": "Loucky974",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
+}
