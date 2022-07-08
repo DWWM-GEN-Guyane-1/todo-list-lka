@@ -37,7 +37,7 @@ var filters = {
 }
 
 // app Vue instance
-var app = new Vue({
+var app = newVue({
     // app initial state
     data: {
       todos: todoStorage.fetch(),
