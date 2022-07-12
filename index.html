@@ -28,7 +28,7 @@
                   <h1>Todos</h1>
                   <input class="new-todo"
                     autofocus autocomplete="off"
-                    placeholder="Don't be a sayer,  be a doer ! What needs to be done?"
+                    placeholder="What needs to be done?"
                     v-model="newTodo"
                     @keyup.enter="addTodo">
                 </header>
@@ -56,12 +56,12 @@
                 </section>
                 <footer class="footer" v-show="todos.length" v-cloak>
                   <span class="todo-count">
-                    <strong>{{ remaining }}</strong> {{ remaining | pluralize }} left
+                    <strong>{{ remaining }}</strong> {{ remaining | pluralize }} restant(s)
                   </span>
                   <ul class="filters">
                     <li><a href="#/all" :class="{ selected: visibility == 'all' }">Tout</a></li>
                     <li><a href="#/active" :class="{ selected: visibility == 'active' }">En cours</a></li>
-                    <li><a href="#/completed" :class="{ selected: visibility == 'completed' }">Finalisé</a></li>
+                    <li><a href="#/completed" :class="{ selected: visibility == 'completed' }">Finalisé(s)</a></li>
                   </ul>
                   <button class="clear-completed" @click="removeCompleted" v-show="todos.length > remaining">
                     Tout effacer
@@ -71,7 +71,7 @@
               <footer class="info">
                 <p>Double-click pour éditer une tâche</p>
                 <p>Written by <a href="http://evanyou.me">Evan You</a></p>
-                 <p>Used <a href="http://anansi-writes.com">Anansi Writes</a></p>
+                 <p>Used by<a href="http://anansi-writes.com">Anansi Writes</a></p>
                 <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
               </footer>
 
