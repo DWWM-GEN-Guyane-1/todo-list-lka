@@ -5,12 +5,13 @@
 <meta name="googlebot" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Todo List Exo</title>
+<title>Get Your Shit Together</title>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="public/js/vue.js"></script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/todomvc-app-css@2.2.0/index.css">
+    <link rel="icon" type="image/x-icon" href="public/images/LOGO ANANSI WRITES THUMBNAIL-modified.ico">
 </head>
 <body><!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="/__/firebase/7.5.0/firebase-app.js"></script>
@@ -24,10 +25,10 @@
 
         <section class="todoapp">
                 <header class="header">
-                  <h1>todos</h1>
+                  <h1>Be a doer</h1>
                   <input class="new-todo"
                     autofocus autocomplete="off"
-                    placeholder="What needs to be done?"
+                    placeholder="Don't be a sayer,  be a doer ! What needs to be done?"
                     v-model="newTodo"
                     @keyup.enter="addTodo">
                 </header>
@@ -58,18 +59,19 @@
                     <strong>{{ remaining }}</strong> {{ remaining | pluralize }} left
                   </span>
                   <ul class="filters">
-                    <li><a href="#/all" :class="{ selected: visibility == 'all' }">All</a></li>
-                    <li><a href="#/active" :class="{ selected: visibility == 'active' }">Active</a></li>
-                    <li><a href="#/completed" :class="{ selected: visibility == 'completed' }">Completed</a></li>
+                    <li><a href="#/all" :class="{ selected: visibility == 'all' }">Tout</a></li>
+                    <li><a href="#/active" :class="{ selected: visibility == 'active' }">En cours</a></li>
+                    <li><a href="#/completed" :class="{ selected: visibility == 'completed' }">Finalisé</a></li>
                   </ul>
                   <button class="clear-completed" @click="removeCompleted" v-show="todos.length > remaining">
-                    Clear completed
+                    Tout effacer
                   </button>
                 </footer>
               </section>
               <footer class="info">
-                <p>Double-click to edit a todo</p>
+                <p>Double-click pour éditer une tâche</p>
                 <p>Written by <a href="http://evanyou.me">Evan You</a></p>
+                 <p>Used <a href="http://anansi-writes.com">Anansi Writes</a></p>
                 <p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
               </footer>
 
